@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jTicker</title>
+<!--
+<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.10.4.custom.css">
+-->
+<link id="css1" rel="stylesheet" href="css/ui-themes/black-tie/jquery-ui.css">
+<link id="css2" rel="stylesheet" href="css/ui-themes/black-tie/jquery.ui.theme.css">
+<link id="css3" rel="stylesheet" type="text/css" href="css/jquery.news.ticker.css"/>
+<link id="css3" rel="stylesheet" type="text/css" href="css/jquery.news.override.css"/>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="js/jquery/jquery-1.11.0.min.js" type="text/javascript"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<script src="js/jquery/jquery-2.1.0.min.js" type="text/javascript"></script>
+<!--<![endif]-->
+<script src="js/jquery.ui/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+<script src="js/dw.scroller/dw_con_scroller.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.commons.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.ui.tooltip.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.ticker.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.tickerremovable.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.stack.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.newsvtab.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.tickerui.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.tickeruitabber.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.newsmenu.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.newsbutton.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.globalmenu.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.tickertabber.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.inputform.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.inputrss.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.inputcategory.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.tickerconfirm.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.tickermsg.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.tickerjson.js" type="text/javascript"></script>
+<script src="js/jquery.news/jquery.news.tickerdata.js" type="text/javascript"></script>
+<style>
+#test {
+	width: 1000px;
+	margin-left:auto;
+	margin-right: auto;
+}
+</style>
+</head>
+<body> 
+<div id="test"></div>
+</body>
+<script type="text/javascript">
+
+	function tickers()
+	{
+		var test = '#test';
+
+		$(test).ticker({url: 'http://codementia.blogspot.com/feeds/posts/default',
+				callback: function() { $(test).ticker({url: 'http://www.microsiervos.com/rss-ciencia.xml',
+													callback: function() { $(test).ticker({url: 'http://exampleusername.livejournal.com/data/atom' 
+															})}
+									})}
+					});
+		$(test).sortable();
+	}
+	google.load("feeds", "1");
+	google.setOnLoadCallback( function() { tickers(); });
+
+</script>
+</html>

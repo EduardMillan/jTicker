@@ -1,0 +1,99 @@
+/* CSS Document */
+.ticker-ui {
+	width: 1000px;
+	margin-left:auto;
+	margin-right: auto;
+	border: 1px solid #999;	
+	padding: 0 0.4em 0.8em 0;
+}
+
+.menu-ticker-ui {
+	margin-left:auto;
+	margin-right: auto;
+	padding: .2em .1em .2em .2em;	/* igual que ui-tabs-vertical (override) */
+}
+
+.menu-ticker-ui ul {
+	list-style-type:none;
+	border: 1px solid #999;	
+	z-index: 1000 !important;
+	position: absolute !important;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-ticker-ui a {
+	font-size: 16px;
+	text-decoration:none;
+	white-space:nowrap !important;
+}
+
+.container {
+	width: 100%;	/* si se usa tickerui .container está dentro de .ticker-ui, */
+/*	margin-left:auto;
+	margin-right: auto;	*/
+	padding: 0.2em;
+	border: 1px solid #999;
+	margin-bottom: 0.1em;
+	overflow:hidden;
+}
+
+.origin {
+	width: 100%;
+	height: 15px;
+	font-size: 12px;
+	font-style:normal;
+	font-weight:normal;	
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+
+.origin a {
+	text-decoration:none;
+}
+
+.capsule {
+	position: relative !important;
+	width: 100%;
+	height: 20px;
+	margin-top: 0.2em;
+	overflow:hidden;
+}
+
+.nest {
+	overflow: hidden;
+}
+
+.ticker{
+	white-space: nowrap;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	font-family:"Courier New", Courier, monospace;
+}
+
+.news-header {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.news-header a {
+	text-decoration:none;
+}
+
+.favicon {
+	margin-right: 0.3em;
+	width:15px;
+	height:15px;
+}
+
+.favicon-thumb {
+	margin-right: 0.3em;
+	width:10px;
+	height:10px;
+}
+
+.ticker-data {
+	width: 100%;
+	height: 250px;
+	border: none;
+}
+

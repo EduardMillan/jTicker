@@ -1,0 +1,114 @@
+.ui-widget-header {
+	border: none;
+}
+
+.ui-menu .ui-icon {
+	position:relative !important;
+}
+
+.ui-menu a {
+	font-size: 12px;
+}
+
+.ui-button {
+	margin 0;
+}
+
+.ui-button:focus {
+	outline: none;
+}
+
+
+.ui-tooltip, .ui-tooltip-content {
+	max-width: 500px !important;
+	font-style:normal;
+	font-weight:normal;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+	CSS para Tabber
+*/
+	
+.ui-tabs {
+	padding 0;
+}
+.ui-tabs-vertical { width: 100%; margin-left: auto; margin-right: auto; }
+.ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 8.15em; }
+.ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+.ui-tabs-vertical .ui-tabs-nav li a { display:block; margin-left: 5px; }
+.ui-tabs-vertical .ui-tabs-nav li a:focus { outline: none; }
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+	padding-bottom: 0; 
+	padding-right: 0; 
+	border-right-width: 1px;
+}
+.ui-tabs-vertical .ui-tabs-panel {
+	padding: 0;
+	float: right;
+	width: 48em;
+	margin-right: .3em;
+	margin-top: .2em;
+}
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+	padding: 0 .3em 0 0;
+	font-size: 14px;
+	width: 100%;
+	font-style:normal;
+	font-weight:normal;
+	font-family:Georgia, "Times New Roman", Times, serif;		
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+	margin-bottom: 2px;
+}
+
+/*
+	CSS para dialogs
+*/
+
+.ui-widget-overlay {
+	background:none;
+}
+
+.ui-dialog .ui-dialog-content {
+	overflow: hidden;
+}
+
+label, input {
+	display:block;
+	font-style:normal;
+	font-weight:normal;
+	font-family: Arial, Helvetica, sans-serif;		
+}
+input.text { margin-bottom:5px; width:95%; padding: .1em; }
+fieldset { padding:0; border:0; margin-top:5px; font-size: 14px; }
+.ui-dialog .ui-state-error { padding: .1em;}
+.validateTip { border: 1px solid transparent; text-align: center; width:95%; font-size: 12px; }
+.ui-dialog-title { 
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	font-family: Arial, Helvetica, sans-serif;	
+}
+.ui-button-text {
+	font-size: 14px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;			
+}
+.ui-dialog-content p {
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	font-family: Arial, Helvetica, sans-serif;		
+}
+
+/*
+	CSS para ventana import/export datos
+*/
+
+.ui-widget .ui-widget-content textarea {
+	font-size: 14px;
+	font-family:"Courier New", Courier, monospace;
+}
