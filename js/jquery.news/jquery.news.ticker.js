@@ -50,6 +50,8 @@
 			}
 		},
 		
+		//	Se crean los divs container, origin, capusle, nest y ticker
+		
 		_createTicker: function()
 		{
 			$(_base).append(
@@ -78,15 +80,16 @@
 			$(_base).tooltip({ hide: {duration: 1000 }});
 		},
 		
+		//	Llamada al API de Google para cargar el feed
+		
 		_loadFeed: function(url)
 		{
-// Create a feed instance that will grab Digg's feed.
 			var feed = new google.feeds.Feed(url);
 			feed.setNumEntries(_max_feed_loads);
-// Calling load sends the request off.  It requires a callback function.
-//			feed.load(function(TotalFeed) { _self._loadPosts(TotalFeed); });
 			feed.load(function(TotalFeed) { _self._callback(TotalFeed); });			
 		},
+		
+		//	Se genera el ticker si existen feeds y se llama al callback del usuario (si existe)
 		
 		_loadPosts: function(TotalFeed)
 		{
@@ -97,6 +100,8 @@
 			}
 			_self._trigger('callback');
 		},
+		
+		//	Se genera cada span news-header para titular y resumen. Si repeat == true se marca el span como inicio de la copia de la lista de titulares
 		
 		_procesaEntradas: function(TotalFeed, iframe, favicon, idxcode, repeat)
 		{
@@ -127,6 +132,8 @@
 			return spanwidth;		
 		},
 		
+		//	Se genera el título y favicon del feed y se lla a _procesaEntradas() para crear la lista de titulares
+		
 		_processFeed: function(TotalFeed)
 		{
 			_self._selector = '#' + _self._selector;
@@ -148,7 +155,7 @@
 					}).css('position', 'absolute').css('float', 'left')
 				)
 			)			
-			var wd = _self._procesaEntradas(TotalFeed, iframe, favicon, _self.idx, false);	
+			var wd = _self._procesaEntradas(TotalFeed, iframe, favicon, _self._idx, false);	
 			for (i = 0; i < ~~(($('.' + classNews.cssclass().container).width() * 2) / wd) + 1; i++)
 				_self._procesaEntradas(TotalFeed, iframe, favicon, _self._idx, (i == 0));
 			_self._activaScroll();
@@ -166,6 +173,8 @@
 			}
 		},
 		
+		//	Estas funciones se usan en jTicker
+		
 		idTicker: function()
 		{
 			return _self._selector;
@@ -175,6 +184,8 @@
 		{
 			return _titleticker;
 		},
+		
+		//	Funciones para refrescar el contenidodel ticker
 		
 		_feedRefresh: function(TotalFeed)
 		{

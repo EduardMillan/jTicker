@@ -3,7 +3,7 @@ jTicker
 jQuery multitab news ticker
 
 Eduard Millán Forn 2014
-http://codementia.blogspot.com.es/
+http://codementia.blogspot.com.es/2014/02/ticker-para-feeds-rss-en-jquery.html
 
 Requiere:
 
