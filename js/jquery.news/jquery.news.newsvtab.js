@@ -60,7 +60,7 @@
 	
 		doRemove: function(id)
 		{
-			$('#' + + idNews.id().tickertabs + ' ul').children('#' + removeSpaces(id)).remove();
+			$('#' + idNews.id().tickertabs + ' ul').children('#' + removeSpaces(id)).remove();
 		},
 		
 		doActivate: function(element)

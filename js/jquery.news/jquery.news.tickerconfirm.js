@@ -71,7 +71,6 @@ $(function ()
 			var buttons = {};
 			buttons[messages.msg().baceptar] = function () { 
 				_self._trigger('callback');
-				$(this).dialog('close');
 			};
 			buttons[messages.msg().bcancel] = function () { $(this).dialog('close'); };
 			return buttons;				
