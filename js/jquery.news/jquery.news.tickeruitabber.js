@@ -80,13 +80,11 @@
 		{
 			var categoria = $('#' + idNews.id().tickertabs).inputcategory().inputcategory('getResult');	
 			var oldc = $(me).attr('category');
-			if ($(me).tickerjson().tickerjson('changeCategory', oldc, categoria))
-			{
-				$(me).attr('category', categoria);
-				oldc = removeSpaces(oldc);
-				$('#' + oldc).children('a').text(categoria);
-				$('#' + oldc).attr('id', removeSpaces(categoria));
-			}
+			$(me).tickerjson().tickerjson('changeCategory', oldc, categoria)
+			$(me).attr('category', categoria);
+			oldc = removeSpaces(oldc);
+			$('#' + oldc).children('a').text(categoria);
+			$('#' + oldc).attr('id', removeSpaces(categoria));
 		},
 		
 		_setOption: function(name, value)	//	Desde aqui salta a _init
