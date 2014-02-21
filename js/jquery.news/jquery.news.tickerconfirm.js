@@ -49,7 +49,10 @@ $(function ()
 				)
 			);
 //			var h = $('#' + idNews.id().confirmation).children('p').height() * ((_self.options.aditional.length > 0) ? 2 : 1);
-			var root = $('.' + classNews.cssclass().mainmenu);
+			if ($('[class="' + classNews.cssclass().mainmenu + '"]').length > 0)
+				var root = $('.' + classNews.cssclass().mainmenu);
+			else
+				var root = $('#' + idNews.id().tickertabs);			
 			$('#' + idNews.id().confirmation).dialog({
 				resizable: false,
       			height: 190,

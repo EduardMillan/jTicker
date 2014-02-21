@@ -61,7 +61,10 @@ $(function ()
 				)					
 			);
 //			var h = $('#' + _self.options.id).height() + $('#' + _self.options.id).children('form').height() + $('#' + _self.options.id).children('p').height();
-			var root = $('.' + classNews.cssclass().mainmenu);
+			if ($('[class="' + classNews.cssclass().mainmenu + '"]').length > 0)
+				var root = $('.' + classNews.cssclass().mainmenu);
+			else
+				var root = $('#' + idNews.id().tickertabs);				
 			$('#' + _self.options.id).dialog({
 				autoOpen: false,
 				height: 220,
